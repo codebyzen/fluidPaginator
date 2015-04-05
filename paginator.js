@@ -26,7 +26,7 @@
 	$.fn.Paginator = function(options) {
 	
 		var settings = $.extend( {
-			'total' : 20,
+			'total' : 10,
 			'value' : 1
 		}, options);
 
