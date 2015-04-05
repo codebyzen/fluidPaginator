@@ -1,6 +1,10 @@
 # fluidPaginator
 Paginator interface with JavaScript and CSS3
 
+Example
+
+<img src="https://github.com/ugputu/fluidPaginator/blob/master/paginator.gif?raw=true">
+
 To include paginator script you can call this code:
 
 	$( "#paginator" ).Paginator( {
