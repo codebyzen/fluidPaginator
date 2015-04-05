@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		
+	
+
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="paginator.css" type="text/css">
+		<script src="paginator.js"></script>
+		
+	</head>
+	<body>
+		<div class="col-xs-6 col-xs-offset-3 jumbotron">
+			<p class="text-center" style="padding:10px;">fadePaginator v0.1 by Eugene Che</p>
+			<p class="text-center" style="padding:10px;"><small>Click to left or right. Or just click to current page number and drag thumb.</small></p>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+				
+					<!-- PAGINATOR -->
+					<div id="paginator">
+						
+						<!-- PAGES -->
+						<div class="p_pages text-center">
+							<i class="fa fa-chevron-left prev cursor-pointer"></i>
+							<span class="current cursor-pointer"></span>
+							<i class="fa fa-chevron-right next cursor-pointer"></i>
+						</div>
+						<!-- / PAGES -->
+						
+						<!-- SLIDER -->
+						<div class="p_slider">
+							<input type="range" min="1" max="10" class="cursor-pointer paginator_slider">
+						</div>
+						<!-- / SLIDER -->
+						
+					</div>
+					<!-- / PAGINATOR -->
+					
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(function() {
+
+				$( "#paginator" ).Paginator( {
+					total : 300,
+					value : 1,
+					btn_prev: $('#paginator .p_pages .prev'),
+					btn_next: $('#paginator .p_pages .next'),
+					div_display_current: $('#paginator .p_pages .current'),
+					slider_input: $('#paginator .p_slider input'),
+					div_pages: $('#paginator .p_pages'),
+					div_slider: $('#paginator .p_slider'),
+					on_new_page: function(page_num){
+					},
+				});
+		
+	
+			});
+		</script>
+	</body>
+</html>
