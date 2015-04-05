@@ -1,0 +1,164 @@
+/* 
+	Title	: jQuery fadePaginator
+	Version	: v0.1
+	Date	: 05 apr 2015
+	Author	: Eugene Che
+	Site	: http://iteye.ru/
+	License	: GPL-3.0
+ */
+	
+body {
+	background: #fff;
+}
+
+#paginator .p_pages {
+	width:100%;
+}
+
+#paginator .p_pages .current {
+	cursor: pointer;
+	padding: 0 2em 0 2em;
+	transition: all 500ms;
+	border-radius: 150%;	
+}
+
+#paginator .p_pages .current:hover {
+	border-radius: 50px;
+	background: #929292;
+	transition: all 500ms;
+}
+
+
+#paginator .p_slider {
+	display:none;
+	position: absolute;
+	width: 50%;
+	top: -10px;
+	left: 25%;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+
+
+/* === WEBKIT === */
+
+#paginator input[type=range].paginator_slider {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 11.5px 0;
+	background: transparent;
+}
+#paginator input[type=range].paginator_slider:focus {
+	outline: none;
+}
+
+
+#paginator input[type=range].paginator_slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 16px;
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+	border-radius: 25px;
+	transition: all 200ms;	
+}
+#paginator input[type=range].paginator_slider::-webkit-slider-thumb {
+	border-radius: 50%;
+	border: 3px solid white;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -2px;
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	background-image: -moz-linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	background-image: -o-linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	background-image: linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	box-shadow: 
+		1px -2px 0 rgba(255,255,255,1),		
+		2px 0px 0 rgba(255,255,255,1),				
+		1px 2px 0 rgba(255,255,255,1),
+		-2px -2px 0 rgba(230,230,230,1), 
+		-3px 0px 0 rgba(230,230,230,1), 
+		-2px 2px 0 rgba(230,230,230,1),
+		inset -1px 0px 2px rgba(0,0,0,0.2);
+}
+
+
+#paginator input[type=range].paginator_slider:focus::-webkit-slider-runnable-track {
+	background: rgba(210,210,210,0.5);
+	transition: all 200ms;	
+}
+
+
+
+/* === MOZILLA === */
+
+#paginator input[type=range].paginator_slider::-moz-range-track {
+	width: 100%;
+	height: 16px;
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+	border-radius: 25px;
+	transition: all 200ms;	
+}
+#paginator input[type=range].paginator_slider::-moz-range-thumb {
+	opacity: 0.9;
+	border-radius: 50%;
+	border: 3px solid white;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	margin-top: -8px;
+	background-color: #fff;
+	background-image: -moz-linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	background-image: linear-gradient(-90deg, transparent, rgba(0,0,0,0.07) 80%);
+	box-shadow: 
+		1px -2px 0 rgba(255,255,255,1),		
+		2px 0px 0 rgba(255,255,255,1),				
+		1px 2px 0 rgba(255,255,255,1),
+		-2px -2px 0 rgba(230,230,230,1), 
+		-3px 0px 0 rgba(230,230,230,1), 
+		-2px 2px 0 rgba(230,230,230,1),
+		inset -1px 0px 2px rgba(0,0,0,0.2);
+}
+
+
+/* === INTERNET EXPLORER === */
+
+#paginator input[type=range].paginator_slider::-ms-track {
+	width: 100%;
+	height: 7px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+#paginator input[type=range].paginator_slider::-ms-fill-lower {
+	background: #ffffe3;
+	border: 1px solid #929292;
+	border-radius: 50px;
+}
+#paginator input[type=range].paginator_slider::-ms-fill-upper {
+	background: #fffffd;
+	border: 1px solid #929292;
+	border-radius: 50px;
+}
+#paginator input[type=range].paginator_slider::-ms-thumb {
+	border: 6px solid #929292;
+	height: 30px;
+	width: 30px;
+	border-radius: 50px;
+	background: #000000;
+	cursor: pointer;
+	height: 7px;
+}
+#paginator input[type=range].paginator_slider:focus::-ms-fill-lower {
+	background: #fffffd;
+}
+#paginator input[type=range].paginator_slider:focus::-ms-fill-upper {
+	background: #ffffff;
+}
